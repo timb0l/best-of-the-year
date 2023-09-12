@@ -50,7 +50,7 @@ public class IndexController {
 
         return film;
     }
-    //song-list
+    //play-list
     private List<Song> getSongList(){
         List<Song> song = new ArrayList<>();
 
