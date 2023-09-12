@@ -12,13 +12,13 @@
 <div class="container">
     <div class="row text-center">
         <h1>Best song</h1>
-        <div class="container">
-            <div th:if="${song.size() > 0}" >
-                <p  th:each="song : ${song}" th:text="|${song.id}) ${song.name}|"></p>
+            <div class="container">
+                <div th:if="${song.size() > 0}" >
+                    <p  th:each="song : ${song}" th:text="|${song.id}) ${song.name}|"></p>
+                </div>
+                <div th:unless="${song.size() > 0}" class="alert alert-info">The playlist is empty</div>
+                <a class="btn btn-primary my-2" th:href="@{/}">Back to homepage</a>
             </div>
-            <div th:unless="${song.size() > 0}" class="alert alert-info">The playlist is empty</div>
-            <a class="btn btn-primary my-2" th:href="@{/}">Back to homepage</a>
-        </div>
     </div>
 </div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
